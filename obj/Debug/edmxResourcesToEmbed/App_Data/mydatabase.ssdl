@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GuviTrainingDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CustomerDetails">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="varchar" MaxLength="10" />
+    <Property Name="customer_phone" Type="int" Nullable="false" />
+    <Property Name="customer_address" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="customer_email" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customer_dob" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="automobile_policy" Type="bit" />
+    <Property Name="vacation_policy" Type="bit" />
+    <Property Name="boat_coverage" Type="bit" />
+    <Property Name="motorcycle_coverage" Type="bit" />
+    <Property Name="registereddate" Type="datetime" />
+    <Property Name="createddate" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CustomerFamilyDetails">
+    <Key>
+      <PropertyRef Name="customer_family_id" />
+    </Key>
+    <Property Name="customer_family_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_id" Type="varchar" MaxLength="10" />
+    <Property Name="customer_name" Type="varchar" MaxLength="10" />
+    <Property Name="Family_membername" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_relation" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="member_gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="policy_member" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="registereddate" Type="datetime" />
+    <Property Name="createddate" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EmployeeUserDetails">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="employee_email" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="employee_contactno" Type="int" Nullable="false" />
+    <Property Name="createdate" Type="datetime" />
+    <Property Name="createdby" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="GuviTrainingDatabaseModelStoreContainer">
+    <EntitySet Name="CustomerDetails" EntityType="Self.CustomerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerFamilyDetails" EntityType="Self.CustomerFamilyDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeUserDetails" EntityType="Self.EmployeeUserDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

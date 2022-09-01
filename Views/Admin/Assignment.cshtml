@@ -1,0 +1,64 @@
+﻿@model  myproject.Models.uploadfiletable
+@{
+    ViewBag.Title = "Assignment";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<center>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <table height="700px" width="800px">
+        <tr>
+            <td align="center" colspan="2"><h1>Assignment Submission</h1></td>
+        </tr>
+        <tr>
+            <td align="center">Student id</td>
+            <td align="center">
+                <a>@Html.TextBoxFor(m => m.student_id)</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">File Name</td>
+            <td align="center">
+                <a>@Html.TextBoxFor(m => m.filenamee)</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Stander</td>
+            <td align="center">
+                <a>@Html.TextBoxFor(m => m.contenttype)</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">File</td>
+            <td align="center">
+                <a>
+                    @Html.LabelFor(m => m.filedata)
+                    <div>
+                        <input type="file" name="file" id="file" />
+                    </div>
+                </a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td align="center" colspan="2">
+                <input type="Submit" id="btnConfirm" value="Confirm" class="btn btn-block" name="Submit" />
+
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</center>
+
+
+
+
+
+

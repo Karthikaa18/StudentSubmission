@@ -1,0 +1,64 @@
+﻿
+@{
+  //  Layout = "~/Views/Admin/Register.cshtml";
+    ViewBag.Title = "Register";
+}
+
+<div id="page-wrapper">
+    <div class="main-page signup-page">
+        <h2 class="title1">Signup here</h2>
+        <div class="sign-up-row widget-shadow">
+            <h5>Personal information: </h5>
+            <div class="sign-u">
+                <input type="text" id="txtfirstname" name="firstname" placeholder="First Name" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="text" id="txtlastname" name="lastname" placeholder="last Name" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="text" id="txtemail" name="email" placeholder="Email" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <div class="sign-up1">
+                    <h4>Gender :</h4>
+                </div>
+                <div class="sign-up2">
+                    <label>
+                        <input type="radio" id="rbtnmale" name="gender" required="">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" id="rbtnfemale" name="gender" required="">
+                        Female
+                    </label>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h6> login Information</h6>
+            <div class="sign-u">
+                <input type="text" id="txtpassword" name="password" placeholder="Password" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="text" id="txtconfirmpassword" name="confirmpassword" placeholder="Confirmpassword" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sub-home">
+                <input type="submit" value="Submit">
+                <div class="clearfix"></div>
+            </div>
+            <div class="registration">
+                Already Registered
+                <a class="" href="login.html">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/Pagescripts/Register.js"></script>

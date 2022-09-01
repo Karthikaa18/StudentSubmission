@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GuviTrainingDatabaseModel1StoreContainer" CdmEntityContainer="GuviTrainingDatabaseEntities1">
+    <EntitySetMapping Name="CustomerDetails">
+      <EntityTypeMapping TypeName="GuviTrainingDatabaseModel1.CustomerDetail">
+        <MappingFragment StoreEntitySet="CustomerDetails">
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="customer_email" ColumnName="customer_email" />
+          <ScalarProperty Name="customer_dob" ColumnName="customer_dob" />
+          <ScalarProperty Name="customer_gender" ColumnName="customer_gender" />
+          <ScalarProperty Name="automobile_policy" ColumnName="automobile_policy" />
+          <ScalarProperty Name="vacation_policy" ColumnName="vacation_policy" />
+          <ScalarProperty Name="boat_coverage" ColumnName="boat_coverage" />
+          <ScalarProperty Name="motorcycle_coverage" ColumnName="motorcycle_coverage" />
+          <ScalarProperty Name="registereddate" ColumnName="registereddate" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerFamilyDetails">
+      <EntityTypeMapping TypeName="GuviTrainingDatabaseModel1.CustomerFamilyDetail">
+        <MappingFragment StoreEntitySet="CustomerFamilyDetails">
+          <ScalarProperty Name="customer_family_id" ColumnName="customer_family_id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="Family_membername" ColumnName="Family_membername" />
+          <ScalarProperty Name="customer_relation" ColumnName="customer_relation" />
+          <ScalarProperty Name="member_gender" ColumnName="member_gender" />
+          <ScalarProperty Name="policy_member" ColumnName="policy_member" />
+          <ScalarProperty Name="registereddate" ColumnName="registereddate" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeUserDetails">
+      <EntityTypeMapping TypeName="GuviTrainingDatabaseModel1.EmployeeUserDetail">
+        <MappingFragment StoreEntitySet="EmployeeUserDetails">
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="employee_email" ColumnName="employee_email" />
+          <ScalarProperty Name="employee_contactno" ColumnName="employee_contactno" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="GuviTrainingDatabaseModel1.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uploadfiletables">
+      <EntityTypeMapping TypeName="GuviTrainingDatabaseModel1.uploadfiletable">
+        <MappingFragment StoreEntitySet="uploadfiletable">
+          <ScalarProperty Name="fileid" ColumnName="fileid" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="filenamee" ColumnName="filenamee" />
+          <ScalarProperty Name="contenttype" ColumnName="contenttype" />
+          <ScalarProperty Name="filedata" ColumnName="filedata" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
