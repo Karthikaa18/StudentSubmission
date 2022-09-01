@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GuviTrainingDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerDetails">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_name" Type="varchar" MaxLength="10" />
+          <Property Name="customer_phone" Type="int" Nullable="false" />
+          <Property Name="customer_address" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="customer_email" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="customer_dob" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="customer_gender" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="automobile_policy" Type="bit" />
+          <Property Name="vacation_policy" Type="bit" />
+          <Property Name="boat_coverage" Type="bit" />
+          <Property Name="motorcycle_coverage" Type="bit" />
+          <Property Name="registereddate" Type="datetime" />
+          <Property Name="createddate" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CustomerFamilyDetails">
+          <Key>
+            <PropertyRef Name="customer_family_id" />
+          </Key>
+          <Property Name="customer_family_id" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="customer_id" Type="varchar" MaxLength="10" />
+          <Property Name="customer_name" Type="varchar" MaxLength="10" />
+          <Property Name="Family_membername" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="customer_relation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="member_gender" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="policy_member" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="registereddate" Type="datetime" />
+          <Property Name="createddate" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="EmployeeUserDetails">
+          <Key>
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="employee_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="employee_name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="employee_email" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="employee_contactno" Type="int" Nullable="false" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="createdby" Type="varchar" MaxLength="10" />
+          <Property Name="status" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="GuviTrainingDatabaseModelStoreContainer">
+          <EntitySet Name="CustomerDetails" EntityType="Self.CustomerDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerFamilyDetails" EntityType="Self.CustomerFamilyDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeUserDetails" EntityType="Self.EmployeeUserDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GuviTrainingDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerDetail">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="customer_phone" Type="Int32" Nullable="false" />
+          <Property Name="customer_address" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_dob" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="automobile_policy" Type="Boolean" />
+          <Property Name="vacation_policy" Type="Boolean" />
+          <Property Name="boat_coverage" Type="Boolean" />
+          <Property Name="motorcycle_coverage" Type="Boolean" />
+          <Property Name="registereddate" Type="DateTime" Precision="3" />
+          <Property Name="createddate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CustomerFamilyDetail">
+          <Key>
+            <PropertyRef Name="customer_family_id" />
+          </Key>
+          <Property Name="customer_family_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="customer_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Family_membername" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_relation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="member_gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="policy_member" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="registereddate" Type="DateTime" Precision="3" />
+          <Property Name="createddate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EmployeeUserDetail">
+          <Key>
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="employee_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="employee_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="employee_email" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="employee_contactno" Type="Int32" Nullable="false" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="createdby" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="GuviTrainingDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerDetails" EntityType="Self.CustomerDetail" />
+          <EntitySet Name="CustomerFamilyDetails" EntityType="Self.CustomerFamilyDetail" />
+          <EntitySet Name="EmployeeUserDetails" EntityType="Self.EmployeeUserDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GuviTrainingDatabaseModelStoreContainer" CdmEntityContainer="GuviTrainingDatabaseEntities">
+          <EntitySetMapping Name="CustomerDetails">
+            <EntityTypeMapping TypeName="GuviTrainingDatabaseModel.CustomerDetail">
+              <MappingFragment StoreEntitySet="CustomerDetails">
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+                <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+                <ScalarProperty Name="customer_email" ColumnName="customer_email" />
+                <ScalarProperty Name="customer_dob" ColumnName="customer_dob" />
+                <ScalarProperty Name="customer_gender" ColumnName="customer_gender" />
+                <ScalarProperty Name="automobile_policy" ColumnName="automobile_policy" />
+                <ScalarProperty Name="vacation_policy" ColumnName="vacation_policy" />
+                <ScalarProperty Name="boat_coverage" ColumnName="boat_coverage" />
+                <ScalarProperty Name="motorcycle_coverage" ColumnName="motorcycle_coverage" />
+                <ScalarProperty Name="registereddate" ColumnName="registereddate" />
+                <ScalarProperty Name="createddate" ColumnName="createddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerFamilyDetails">
+            <EntityTypeMapping TypeName="GuviTrainingDatabaseModel.CustomerFamilyDetail">
+              <MappingFragment StoreEntitySet="CustomerFamilyDetails">
+                <ScalarProperty Name="customer_family_id" ColumnName="customer_family_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="Family_membername" ColumnName="Family_membername" />
+                <ScalarProperty Name="customer_relation" ColumnName="customer_relation" />
+                <ScalarProperty Name="member_gender" ColumnName="member_gender" />
+                <ScalarProperty Name="policy_member" ColumnName="policy_member" />
+                <ScalarProperty Name="registereddate" ColumnName="registereddate" />
+                <ScalarProperty Name="createddate" ColumnName="createddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeUserDetails">
+            <EntityTypeMapping TypeName="GuviTrainingDatabaseModel.EmployeeUserDetail">
+              <MappingFragment StoreEntitySet="EmployeeUserDetails">
+                <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+                <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+                <ScalarProperty Name="employee_email" ColumnName="employee_email" />
+                <ScalarProperty Name="employee_contactno" ColumnName="employee_contactno" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="createdby" ColumnName="createdby" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
